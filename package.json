@@ -1,0 +1,17 @@
+{
+  "name": "TicTac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://insovai.github.io/tictac",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d TicTac" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

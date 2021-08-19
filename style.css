@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    color: #4c6986;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper{
+    padding: 40px;
+    height: 800px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.restart{
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid #4c6986;
+    transition: all 0.2 ease;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.restart:hover{
+    background-color:#4c6986;
+    color: white;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+}
+.header{
+    display: flex;
+    color: #9a9a9a;
+    font-size: 24px;
+}
+.header .playerX{
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+}
+.header .playerO{
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom: 8px;
+
+} 
+.playerX.active{
+    color:#42bed7;
+    border-color:#42bed7 ;
+}
+.playerO.active{
+    color:#d7bafb;
+    border-color:#d7bafb ;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    flex-grow: 1;  /* grow as much as posible */
+    grid-gap: 0;
+    padding: 10px;
+    background-color: white;
+    
+}
+.board-tile{
+    font-size: 80px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.board-tile:not(:nth-child(3n)){
+    border-right: 3px solid gray;
+}
+.board-tile:nth-child(-n+6){
+    border-bottom: 3px solid gray;;
+
+}
+.board-tile:hover{
+    background-color: #eee;
+}
+.type-x{
+    color:#42bed7 ;
+}
+.type-o {
+    color: #d7bafb;
+}
+.tile-winner span{
+    color: #23ce6b;
+}
+@media only screen and (min-width: 600px) {
+    .wrapper {
+    flex-direction: column;
+    }
+    .title{
+        margin-bottom: 40px;
+    }
+  }
